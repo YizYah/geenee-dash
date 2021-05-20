@@ -1,0 +1,22 @@
+{{start imports}}
+import test from 'ava';
+{{custom customImports}}
+
+const output = require('../src/index')
+{{end imports}}
+
+{{customStart general}}
+test('general', t => {
+  // replace with whatever you'd like.  To start over with the default,
+  // remove everything in the `general` section incluing the `ns-custom-start`
+  // and `ns-custom-end` lines.
+{{#if nsInfo.general.multi}}
+    {{#each nsInfo.static.grouping}}
+  t.not(typeof output.{{slug}}, "undefined")
+    {{/each}}
+    t.is(1,1) // this is just to make sure you have at least one assertion in your test.
+{{else}}
+  t.not(typeof output, "undefined")
+{{/if}}
+});
+{{customEnd general}}

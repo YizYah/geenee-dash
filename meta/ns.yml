@@ -1,0 +1,14 @@
+userClass: user
+codeName: MyApp
+template:
+  dir: /home/yisroel/packages/packrat-ts-all/packrat
+  name: null
+  version: 1
+starter: /home/yisroel/packages/geenee-dash-all/geenee-dash.starter
+general:
+  packageName: geenee-dash
+  author: YizYah
+  owner: YizYah
+  repositoryName: geenee-dash
+  license: MIT
+  multi: true
